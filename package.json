@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "upgrade-interactive": "npm-check --update",
-    "lint": "eslint src/**/*.ts test/**/*.ts jest.config.js",
-    "lintfix": "eslint --fix src/**/*.ts test/**/*.ts jest.config.js",
+    "lint": "eslint --ext .ts jest.config.js src/ test/",
+    "lintfix": "eslint --fix --ext .ts jest.config.js src/ test/",
     "test": "jest"
   },
   "repository": {
