@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "upgrade-interactive": "npm-check --update",
-    "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
-    "lintfix": "tslint -c tslint.json --fix src/**/*.ts test/**/*.ts",
+    "lint": "eslint src/**/*.ts test/**/*.ts jest.config.js",
+    "lintfix": "eslint --fix src/**/*.ts test/**/*.ts jest.config.js",
     "test": "jest"
   },
   "repository": {
@@ -27,10 +27,12 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "eslint": "^5.16.0",
     "jest": "^24.8.0",
     "npm-check": "^5.9.0",
     "ts-jest": "^24.0.2",
-    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   }
 }
