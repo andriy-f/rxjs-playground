@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-commit": "concurrently \"npm:lint\" \"npm:test\" \"npm:build\""
+    "pre-commit": "concurrently -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm:lint\" \"npm:test\" \"npm:build\""
   }
 }
