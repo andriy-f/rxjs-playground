@@ -8,7 +8,8 @@
     "upgrade-interactive": "npm-check --update",
     "lint": "eslint --ext .ts jest.config.js src/ test/",
     "lintfix": "eslint --fix --ext .ts jest.config.js src/ test/",
-    "test": "jest"
+    "test": "jest",
+    "tdd": "jest --watch"
   },
   "repository": {
     "type": "git",
