@@ -21,3 +21,5 @@ test_script:
   - npm run lint
   # Run tests
   - npm test
+build_script:
+  - "npm run build"
