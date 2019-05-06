@@ -4,7 +4,7 @@
   "description": "Project for experimenting with RxJS",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
+    "build": "tsc",
     "upgrade-interactive": "npm-check --update",
     "lint": "eslint --ext .ts jest.config.js src/ test/",
     "lintfix": "eslint --fix --ext .ts jest.config.js src/ test/",
