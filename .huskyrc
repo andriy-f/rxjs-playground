@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "concurrently \"npm:lint\" \"npm:test\" \"npm:build\""
+  }
+}
