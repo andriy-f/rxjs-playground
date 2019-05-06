@@ -12,14 +12,13 @@ export const rangesample = (): Observable<number> => {
 export const mergeMapSample = (): Observable<string> => {
   const lettersSource = of('a', 'b', 'c')
   const lettersWithNumbersSource = lettersSource.pipe(
-    mergeMap((x): Observable<string> => interval(1000).pipe(map((i): string => x + i))),
+    mergeMap((x): Observable<string> => interval(100).pipe(map((i): string => x + i))),
   )
 
-  // const resultCount = lettersWithNumbersSource.pipe(scan((acc, val) => acc + '1'))
-  const resultCount = lettersWithNumbersSource.pipe(scan((acc, val): string => acc + val))
-  const fiveCountCondition = resultCount.pipe(filter((val): boolean => val.length > 1))
+  const resultCount = lettersWithNumbersSource.pipe(scan<string, number>((acc): number => acc + 1, 0))
+  const fiveCountCondition = resultCount.pipe(filter((val): boolean => val > 3))
 
-  const res = lettersSource.pipe(takeUntil(fiveCountCondition))
+  const res = lettersWithNumbersSource.pipe(takeUntil(fiveCountCondition))
   return res
 }
 

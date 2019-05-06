@@ -24,7 +24,7 @@ test('test rxjs mergeMap', (done): void => {
     next: (val): void => { vals.push(val) },
     error: (err): void => { done(err) },
     complete: (): void => {
-      expect(vals).toStrictEqual(['a', 'b', 'c'])
+      expect(vals).toStrictEqual(['a0', 'b0', 'c0'])
       done()
     }
   })
