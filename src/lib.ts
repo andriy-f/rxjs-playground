@@ -1,9 +1,7 @@
 import { range, of, interval, Observable } from 'rxjs'
 import { mergeMap, map, scan, filter, takeUntil, withLatestFrom } from 'rxjs/operators'
 
-export const add = (a: number, b: number): number => {
-  return a + b
-}
+export const add = (a: number, b: number): number => a + b
 
 export const rangesample = (): Observable<number> => range(1, 10)
 
