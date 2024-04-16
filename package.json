@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "upgrade-interactive": "npm-check --update",
-    "lint": "eslint --ext .ts jest.config.js src/ test/",
-    "lintfix": "eslint --fix --ext .ts jest.config.js src/ test/",
+    "lint": "eslint jest.config.js src/ test/",
+    "lintfix": "eslint --fix jest.config.js src/ test/",
     "test": "jest",
     "tdd": "jest --watch"
   },
@@ -28,17 +28,18 @@
     "rxjs": "^6.5.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/jest": "^24.0.12",
     "@types/node": "^20.12.7",
-    "@typescript-eslint/eslint-plugin": "^1.7.0",
-    "@typescript-eslint/parser": "^1.7.0",
     "concurrently": "^4.1.0",
-    "eslint": "^5.16.0",
+    "eslint": "^8.57.0",
+    "globals": "^15.0.0",
     "husky": "^2.2.0",
     "jest": "^24.8.0",
     "npm-check": "^5.9.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0"
   }
 }
