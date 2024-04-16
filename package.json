@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "upgrade-interactive": "npm-check --update",
     "lint": "eslint jest.config.js src/ test/",
     "lintfix": "eslint --fix jest.config.js src/ test/",
     "test": "jest",
@@ -37,7 +36,6 @@
     "globals": "^15.0.0",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
-    "npm-check": "^6.0.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.0"
